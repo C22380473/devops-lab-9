@@ -1,4 +1,12 @@
 def solve_sudoku(input_board):
+    # Validate input type
+    if not isinstance(input_board, list):
+        return None
+
+    # Validate input length
+    if len(input_board) != 81:
+        return None
+    
     # Initialise the grid from the input_board
     grid = [0] * 81
     given = [False] * 81
